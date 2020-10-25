@@ -15,6 +15,7 @@
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Введите название валюты"
             android:layout_margin="32dp"
             android:ems="10"
             android:inputType="textPersonName"
