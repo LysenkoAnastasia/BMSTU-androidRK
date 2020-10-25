@@ -46,18 +46,4 @@ class MainActivity : AppCompatActivity() {
             adapter = viewAdapterF
         }
     }
-
-    fun openMe(view: View) {
-        val myToast = Toast.makeText(this, "Курсы", Toast.LENGTH_SHORT)
-        myToast.show()
-        click(text_count)
-    }
-
-    fun click(view: View) {
-        val countString = text_count.text.toString()
-
-        var count: Int = Integer.parseInt(countString.toString())
-        count++
-        text_count.text = count.toString();
-    }
 }
