@@ -1,8 +1,11 @@
 package com.example.rk_android
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
+import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +16,29 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         return super.onCreateOptionsMenu(menu)
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if (id == R.id.action_refresh) {
+            updateData()
+        }
+        if (id == R.id.action_settings) {
+            courseSettings()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    fun updateData(){
+
+    }
+
+    fun courseSettings(){
+        val intent = Intent(this, SettingsActivity::class.java).apply {}
+        startActivity(intent)
+
     }
 
 

@@ -37,7 +37,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MovieViewHolder>() {
             fun from(parent: ViewGroup): MovieViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val view = layoutInflater
-                    .inflate(R.layout.list_item, parent, false)
+                    .inflate(R.layout.fragment_list, parent, false)
 
                 return MovieViewHolder(view)
             }
