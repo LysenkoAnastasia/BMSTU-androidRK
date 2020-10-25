@@ -35,7 +35,7 @@
                 android:layout_margin="8dp"
                 android:layout_marginEnd="15dp"
                 android:text="Display"/>
-        </LinearLayout>>
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_course_date"
