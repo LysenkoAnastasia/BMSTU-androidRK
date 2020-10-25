@@ -11,20 +11,35 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <EditText
-            android:id="@+id/editText"
+        <LinearLayout
+            android:id="@+id/linear_edittext_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Введите название валюты"
-            android:layout_margin="32dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:src="@mipmap/ic_launcher"
-            android:textColor="@color/colorPrimaryDark" />
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:hint="Введите название валюты"
+                android:layout_margin="8dp"
+                android:ems="10"
+                android:inputType="text"
+                android:src="@mipmap/ic_launcher"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <Button
+                android:id="@+id/displayCurrency"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:layout_marginEnd="15dp"
+                android:text="Display"/>
+        </LinearLayout>>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_course_date"
-            android:layout_below="@id/editText"
+            android:layout_below="@id/linear_edittext_button"
             android:layout_height="400dp"
             android:layout_width="match_parent"
             android:scrollbars="vertical"
