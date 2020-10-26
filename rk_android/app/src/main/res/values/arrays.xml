@@ -11,9 +11,9 @@
     </string-array>
 
     <string-array name="settings_list_preference_titles">
-        <item>Рубль</item>
-        <item>Доллар</item>
-        <item>Евро</item>
+        <item>RUB</item>
+        <item>USD</item>
+        <item>EUR</item>
     </string-array>
     <string-array name="settings_list_preference_values">
         <item>RUB</item>

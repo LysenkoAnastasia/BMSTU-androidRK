@@ -20,7 +20,7 @@ class SettingsActivity : AppCompatActivity(){
     class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener{
         private var mSharedPreferences: SharedPreferences? = null
         private var defaultDays = "10"
-        private var defaultCurrency = "Рубль"
+        private var defaultCurrency = "USD"
 
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.pref_fragment, rootKey)

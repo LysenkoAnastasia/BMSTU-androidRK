@@ -10,7 +10,7 @@
     <fragment
         android:id="@+id/hostFragment"
         android:name="com.example.rk_android.ListFragment"
-        android:label="fragment_host"
+        android:label="Currencies"
         tools:layout="@layout/fragment_host" >
         <action
             android:id="@+id/action_mainActivity_to_settingsActivity"
@@ -26,6 +26,6 @@
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.rk_android.secondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        android:label="Currency"
+        tools:layout="@layout/fragment_currency" />
 </navigation>

@@ -14,6 +14,7 @@
     <string name="low_value">lowValue</string>
     <string name="high_value">highValue</string>
     <string name="open_link">open site</string>
+    <string name="helper">for more information, follow the link</string>
     <string name="hello_world">Hello Square World!</string>
 
 </resources>
