@@ -8,6 +8,6 @@
   ![Second Page of Application](https://github.com/LysenkoAnastasia/BMSTU-androidRK/blob/alena_branch/DatePage.jpg)
   
  
-#### Выбор валюты в настройках приложения <h4>
+# Выбор валюты в настройках приложения <h1>
   #### Открывается при нажатии на ⋮ -> Settings -> Currency.
   ![Currency Settings](https://github.com/LysenkoAnastasia/BMSTU-androidRK/blob/alena_branch/Setting.jpg)
