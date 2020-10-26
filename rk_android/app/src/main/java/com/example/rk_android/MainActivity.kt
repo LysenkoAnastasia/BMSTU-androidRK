@@ -1,10 +1,10 @@
 package com.example.rk_android
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.rk_android.databinding.ActivityMainBinding
@@ -33,6 +33,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             return true
         }
+
+        if (id == R.id.menu_refresh) {
+            onRestart()
+//            val refresh = Intent(this, ListFragment::class.java)
+//            startActivity(refresh) //Start the same Activity
+//
+////            finish() //finish Activity.
+//
+//            return true
+        }
         return super.onOptionsItemSelected(item)
     }
 
@@ -43,5 +53,10 @@ class MainActivity : AppCompatActivity() {
         else {
             super.onBackPressed();
         }
+    }
+
+    override fun onRestart() {
+        recreate()
+        super.onRestart()
     }
 }

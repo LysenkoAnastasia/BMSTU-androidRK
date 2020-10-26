@@ -31,7 +31,7 @@ class ListViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
             itemInfo.arguments = bundle
             bundle.putString("high", elem.high)
             bundle.putString("low", elem.low)
-            parent.findNavController().navigate(R.id.action_hostFragment_to_secondFragment2, bundle)
+            parent.findNavController().navigate(R.id.action_hostFragment_to_currencyFragment, bundle)
         }
     }
 

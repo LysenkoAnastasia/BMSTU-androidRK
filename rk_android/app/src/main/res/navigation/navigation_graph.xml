@@ -16,7 +16,7 @@
             android:id="@+id/action_mainActivity_to_settingsActivity"
             app:destination="@id/settingsActivity" />
         <action
-            android:id="@+id/action_hostFragment_to_secondFragment2"
+            android:id="@+id/action_hostFragment_to_currencyFragment"
             app:destination="@id/secondFragment" />
     </fragment>
     <activity

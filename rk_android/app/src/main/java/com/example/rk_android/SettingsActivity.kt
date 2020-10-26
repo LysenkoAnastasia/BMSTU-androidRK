@@ -19,8 +19,8 @@ class SettingsActivity : AppCompatActivity(){
 
     class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener{
         private var mSharedPreferences: SharedPreferences? = null
-        private var defaultDays = "10"
-        private var defaultCurrency = "USD"
+        private var amountOfDays = "10"
+        private var selectedCurrency = "USD"
 
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.pref_fragment, rootKey)
@@ -28,31 +28,32 @@ class SettingsActivity : AppCompatActivity(){
             mSharedPreferences!!.registerOnSharedPreferenceChangeListener(this)
             val notificationPreference: EditTextPreference? = findPreference("days")
             if (notificationPreference != null) {
-                defaultDays = notificationPreference.text
+                amountOfDays = notificationPreference.text
             }
             if (notificationPreference != null) {
-                notificationPreference.summary = defaultDays
+                notificationPreference.summary = amountOfDays
             }
             notificationPreference!!.onPreferenceChangeListener =
                 Preference.OnPreferenceChangeListener{preference, newValue ->
                     var days: Int? = newValue.toString().toIntOrNull()
                     if (days != null && days > 0) {
                         preference.summary = newValue.toString()
-                        defaultDays = newValue.toString()
+                        amountOfDays = newValue.toString()
                         true
                     } else {
-                        preference.summary = defaultDays
+                        preference.summary = amountOfDays
                             false
                     }
                 }
             val countryPreference: ListPreference? = findPreference("currencyList")
             if (countryPreference != null) {
-                defaultCurrency = "USD"
+                selectedCurrency = "USD"
             }
-            countryPreference?.summary = defaultCurrency
+            countryPreference?.summary = selectedCurrency
+            
             countryPreference!!.onPreferenceChangeListener =
                 Preference.OnPreferenceChangeListener{preference, newValue ->
-                    defaultCurrency = newValue.toString()
+                    selectedCurrency = newValue.toString()
                     preference.summary = newValue.toString()
                     true
                 }
