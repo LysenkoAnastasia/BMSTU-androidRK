@@ -13,4 +13,25 @@
         app:showAsAction="ifRoom"
         android:orderInCategory="2"
         android:title="@string/menu_refresh" />
+
+    <item
+        android:id="@+id/action_open_web_page"
+        android:title="@string/open_web_page"
+        app:showAsAction="never"
+        android:orderInCategory="3">
+    </item>
+
+    <item
+        android:id="@+id/action_show_map"
+        android:title="@string/show_map"
+        app:showAsAction="never"
+        android:orderInCategory="4">
+    </item>
+
+    <item
+        android:id="@+id/action_open_wifi_setting"
+        android:title="@string/open_wifi_settings"
+        app:showAsAction="never"
+        android:orderInCategory="5">
+    </item>
 </menu>

@@ -22,10 +22,11 @@ class SettingsActivity : AppCompatActivity(){
         private var amountOfDays:Int = 10
         private var selectedCurrency = "USD"
 
-        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-            setPreferencesFromResource(R.xml.pref_fragment, rootKey)
+        override fun onCreatePreferences(savedInstanceState: Bundle?, key: String?) {
+            setPreferencesFromResource(R.xml.pref_fragment, key)
             mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity)
             mSharedPreferences!!.registerOnSharedPreferenceChangeListener(this)
+
             val notificationPreference: EditTextPreference? = findPreference("days")
             if (notificationPreference != null) {
                 amountOfDays = notificationPreference.text.toInt()
