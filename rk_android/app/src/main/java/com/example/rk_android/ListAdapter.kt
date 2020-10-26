@@ -1,46 +1,26 @@
 package com.example.rk_android
+
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ListAdapter : RecyclerView.Adapter<ListAdapter.MovieViewHolder>() {
-    var dataF = listOf<MainActivity.Movie>()
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+class ListAdapter(private val list: List<Elem>)
+    : RecyclerView.Adapter<ListViewHolder>() {
 
-
-    override fun getItemCount() = dataF.size
-
-    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        val item : MainActivity.Movie = dataF[position]
-        holder.setData(item)
-
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
+        return ListViewHolder(inflater, parent)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        return MovieViewHolder.from(parent)
+    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
+        val elemItem: Elem = list[position]
+        holder.bind(elemItem)
     }
 
-    class MovieViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
-        val textView: TextView = itemView.findViewById(R.id.name)
+    override fun getItemCount(): Int = list.size
 
-        fun setData(item: MainActivity.Movie) {
-            textView.text = item.name
+    data class Elem(val date: String, val closePrice: String, val currency: String, val high:String, val low:String, val open: String)
 
-        }
 
-        companion object {
-            fun from(parent: ViewGroup): MovieViewHolder {
-                val layoutInflater = LayoutInflater.from(parent.context)
-                val view = layoutInflater
-                    .inflate(R.layout.fragment_list, parent, false)
-
-                return MovieViewHolder(view)
-            }
-        }
-    }
 }
+
