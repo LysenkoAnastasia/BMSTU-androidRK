@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">rk_android</string>
-    <string name="menu_item_settings">Settings</string>
-    <string name="refresh">refresh</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <string name="open_web_page">Open web page</string>
+    <string name="show_map">Show map</string>
+    <string name="insert_contact">Insert contact</string>
+    <string name="open_wifi_settings">Open wifi settings</string>
+
+    <string name="settings">Settings</string>
+    <string name="menu_refresh">refresh</string>
+
+    <string name="low_value">lowValue</string>
+    <string name="high_value">highValue</string>
+    <string name="open_link">https://min-api.cryptocompare.com</string>
+    <string name="helper">Follow the link for more information</string>
+
 </resources>
